@@ -1,0 +1,982 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f3f4;
+    color: #2b2b2b;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+}
+
+
+.header-container {
+    width: 95%;
+
+    height: 100px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo img {
+    width: 120px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.navigation a {
+    color: white;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover {
+    opacity: 0.75;
+}
+
+
+.navigation a.active {
+    font-weight: 700;
+
+    position: relative;
+}
+
+
+.navigation a.active::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: white;
+
+    left: 0;
+
+    bottom: -8px;
+}
+
+
+/* =========================================
+   BOTÃO MOBILE
+========================================= */
+
+.menu-button {
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 300px;
+
+    padding-top: 130px;
+
+    background: linear-gradient(
+        110deg,
+        #754892 0%,
+        #9a168c 48%,
+        #cc008a 100%
+    );
+
+    color: white;
+}
+
+
+.hero-content {
+    text-align: center;
+}
+
+
+.hero h1 {
+    font-size: 46px;
+
+    font-weight: 700;
+
+    margin-top: 45px;
+}
+
+
+.hero p {
+    font-size: 22px;
+
+    font-weight: 400;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   SEÇÃO PRINCIPAL
+========================================= */
+
+.guide-section {
+    width: 100%;
+
+    background: #f4f3f4;
+
+    padding: 0 35px 60px;
+}
+
+
+.guide-container {
+    max-width: 1500px;
+
+    min-height: 620px;
+
+    margin: 0 auto;
+
+    margin-top: -5px;
+
+    padding: 80px 80px;
+
+    background: linear-gradient(
+        110deg,
+        #f6f5f6,
+        #eeeeef
+    );
+
+    border-radius: 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        310px
+        minmax(500px, 1fr)
+        330px;
+
+    gap: 50px;
+}
+
+
+/* =========================================
+   COLUNA DO PROTÓTIPO
+========================================= */
+
+.prototype-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 45px;
+}
+
+
+.prototype-image {
+    width: 290px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   CARD DO PROJETO
+========================================= */
+
+.project-card {
+    width: 250px;
+
+    padding: 15px;
+
+    display: flex;
+
+    gap: 10px;
+
+    background: #f5f4f5;
+
+    border: 1px solid #d4d1d4;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.project-card-icon {
+    width: 25px;
+
+    height: 25px;
+
+    object-fit: contain;
+}
+
+
+.project-card h3 {
+    color: #3e2079;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+.project-card p {
+    font-size: 7px;
+
+    line-height: 1.7;
+
+    color: #343434;
+}
+
+
+/* =========================================
+   PASSOS
+========================================= */
+
+.steps-column {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.steps-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.steps-title img {
+    width: 40px;
+
+    height: 45px;
+
+    object-fit: contain;
+}
+
+
+.steps-title h2 {
+    color: #3e2878;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PASSO
+========================================= */
+
+.step {
+    min-height: 64px;
+
+    display: grid;
+
+    grid-template-columns:
+        45px
+        38px
+        1fr;
+
+    align-items: center;
+
+    column-gap: 16px;
+
+    margin-bottom: 3px;
+}
+
+
+.step-number {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #3e1d7c;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+.step-icon {
+    width: 28px;
+
+    height: 28px;
+
+    object-fit: contain;
+}
+
+
+.step-text h3 {
+    color: #3e2079;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+}
+
+
+.step-text p {
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    color: #252525;
+}
+
+
+/* =========================================
+   SINTOMAS
+========================================= */
+
+.symptoms {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 6px;
+}
+
+
+.symptoms span {
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.mild {
+    color: #468f52;
+}
+
+
+.moderate {
+    color: #d39a00;
+}
+
+
+.severe {
+    color: #bd3535;
+}
+
+
+/* =========================================
+   PRIORIDADES
+========================================= */
+
+.priority {
+    margin-top: 4px;
+}
+
+
+.priority p {
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.priority-green {
+    color: #478d51;
+}
+
+
+.priority-yellow {
+    color: #d99d00;
+}
+
+
+.priority-red {
+    color: #bd3737;
+}
+
+
+/* =========================================
+   COLUNA DIREITA
+========================================= */
+
+.right-column {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.video-section {
+    padding-top: 10px;
+}
+
+
+.video-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+
+.video-title img {
+    width: 65px;
+
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+.video-title h2 {
+    color: #3e2878;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+.video-title p {
+    max-width: 220px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* SETA */
+
+.arrow {
+    color: #3e2079;
+
+    text-align: center;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    margin: 12px 0;
+}
+
+
+/* =========================================
+   CARD VÍDEO
+========================================= */
+
+.video-card {
+    width: 215px;
+
+    height: 120px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    background: #f5f4f5;
+
+    border: 1px solid #b9b7bb;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.video-card:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 8px 20px
+        rgba(66, 27, 110, 0.15);
+}
+
+
+.video-card img {
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
+}
+
+
+.video-card h3 {
+    color: #3e2079;
+
+    font-size: 10px;
+}
+
+
+.video-card span {
+    color: #5d5570;
+
+    font-size: 6px;
+}
+
+
+/* =========================================
+   DÚVIDAS
+========================================= */
+
+.questions-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.questions-section img {
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+}
+
+
+.questions-section h2 {
+    color: #3e2878;
+
+    font-size: 20px;
+
+    margin-bottom: 4px;
+}
+
+
+.questions-section p {
+    max-width: 230px;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MODAL DO VÍDEO
+========================================= */
+
+.video-modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    z-index: 1000;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.video-modal.active {
+    display: flex;
+}
+
+
+.video-modal-content {
+    width: 90%;
+
+    max-width: 700px;
+
+    min-height: 350px;
+
+    padding: 40px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+
+.video-modal-content h2 {
+    color: #3e2079;
+
+    margin-bottom: 10px;
+}
+
+
+.close-video {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #3e2079;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   SEÇÕES VAZIAS
+========================================= */
+
+.hidden-section {
+    min-height: 1px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1250px) {
+
+    .guide-container {
+        grid-template-columns:
+            250px
+            1fr;
+    }
+
+    .right-column {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .questions-section {
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 950px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .guide-container {
+        padding: 50px 35px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        position: relative;
+
+        background:
+            linear-gradient(
+                110deg,
+                #754892,
+                #cc008a
+            );
+    }
+
+
+    .header-container {
+        min-height: 90px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .menu-button {
+        display: block;
+    }
+
+
+    .navigation {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        padding: 20px 0;
+    }
+
+
+    .navigation.open {
+        display: flex;
+    }
+
+
+    .hero {
+        padding-top: 50px;
+
+        min-height: 230px;
+    }
+
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .guide-section {
+        padding: 0 15px 30px;
+    }
+
+
+    .guide-container {
+        grid-template-columns: 1fr;
+
+        padding: 40px 20px;
+
+        gap: 50px;
+
+        border-radius: 18px;
+    }
+
+
+    .prototype-column {
+        order: 1;
+    }
+
+
+    .steps-column {
+        order: 2;
+    }
+
+
+    .right-column {
+        grid-column: auto;
+
+        order: 3;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .step {
+        grid-template-columns:
+            42px
+            35px
+            1fr;
+    }
+
+
+    .symptoms {
+        gap: 8px;
+    }
+
+
+    .questions-section {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo img {
+        width: 95px;
+    }
+
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+
+    .hero p {
+        font-size: 13px;
+
+        padding: 0 20px;
+    }
+
+
+    .steps-title h2 {
+        font-size: 16px;
+    }
+
+
+    .step-number {
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 16px;
+    }
+
+
+    .step-text h3 {
+        font-size: 10px;
+    }
+
+
+    .step-text p {
+        font-size: 7px;
+    }
+
+}
