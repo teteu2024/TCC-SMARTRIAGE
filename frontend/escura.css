@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
-    color: #252525;
+    background: #18001f;
+    color: #ffffff;
 }
 
 .header {
@@ -43,17 +43,19 @@ body {
 }
 
 .menu a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .menu a:hover {
-    opacity: 0.7;
+    color: #ff00b8;
+    opacity: 1;
 }
 
 .menu a.ativo {
+    color: #ffffff;
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 6px;
@@ -87,12 +89,12 @@ body {
     min-height: 430px;
     padding-top: 100px;
     background: linear-gradient(
-        100deg,
-        #70458f,
-        #a6008e,
-        #cf008e
+        110deg,
+        #76006f,
+        #51004f,
+        #25002f
     );
-    color: white;
+    color: #ffffff;
 }
 
 .hero-container {
@@ -111,10 +113,11 @@ body {
     font-size: 43px;
     line-height: 1.45;
     font-weight: 800;
+    color: #ffffff;
 }
 
 .hero-text h1 span {
-    color: #d9a5cf;
+    color: #e49ad7;
 }
 
 .hero-text > p {
@@ -122,10 +125,12 @@ body {
     margin-top: 5px;
     font-size: 14px;
     line-height: 1.55;
+    color: #ffffff;
 }
 
 .hero-text > strong {
     font-size: 14px;
+    color: #ffffff;
 }
 
 .hero-button {
@@ -135,9 +140,11 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #542681;
+    background: #3b0757;
+    border: 1px solid #a90091;
     border-radius: 6px;
     font-size: 10px;
+    color: #ffffff;
 }
 
 .hero-button img {
@@ -166,11 +173,12 @@ body {
 
 .benefit h3 {
     font-size: 8px;
+    color: #ffffff;
 }
 
 .benefit p {
     font-size: 6px;
-    color: #eeeeee;
+    color: #e8cde5;
 }
 
 .hero-image-area {
@@ -194,9 +202,9 @@ body {
     align-items: center;
     gap: 12px;
     padding: 12px 20px;
-    border: 1px solid #d7a6dc;
+    border: 1px solid #b53aa8;
     border-radius: 10px;
-    background: rgba(85, 37, 128, 0.6);
+    background: rgba(54, 0, 64, 0.8);
 }
 
 .care-box img {
@@ -207,11 +215,18 @@ body {
 
 .care-box p {
     font-size: 7px;
+    color: #ffffff;
 }
 
 .about {
-    background: #f5f5f5;
+    background: linear-gradient(
+        110deg,
+        #31002f,
+        #250025,
+        #17001f
+    );
     padding: 55px 0 45px;
+    color: #ffffff;
 }
 
 .about-container {
@@ -223,7 +238,7 @@ body {
 }
 
 .about-left {
-    border-right: 1px solid #c5c5c5;
+    border-right: 1px solid #74205f;
     padding-right: 55px;
     display: flex;
     flex-direction: column;
@@ -245,7 +260,7 @@ body {
 
 .about-item span,
 .difference-title span {
-    color: #a90087;
+    color: #ff00b8;
     font-size: 12px;
     font-weight: 700;
 }
@@ -253,15 +268,17 @@ body {
 .about-item h2 {
     font-size: 13px;
     margin: 3px 0 7px;
+    color: #ffffff;
 }
 
 .about-item p {
     font-size: 10px;
     line-height: 1.6;
+    color: #e6d6e6;
 }
 
 .about-item strong {
-    color: #a90087;
+    color: #ff00b8;
 }
 
 .tags {
@@ -273,6 +290,7 @@ body {
 
 .tags span {
     font-size: 10px;
+    color: #ff00b8;
 }
 
 .difference-title {
@@ -290,6 +308,7 @@ body {
 
 .difference-title h2 {
     font-size: 15px;
+    color: #ffffff;
 }
 
 .features {
@@ -312,13 +331,14 @@ body {
 
 .feature h3 {
     font-size: 12px;
+    color: #ffffff;
 }
 
 .feature p {
     margin-top: 5px;
     font-size: 11px;
     line-height: 1.5;
-    color: #555;
+    color: #d7c4d8;
 }
 
 .final-message {
@@ -327,7 +347,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    color: #a90087;
+    color: #ff00b8;
 }
 
 .final-message img {
@@ -338,43 +358,50 @@ body {
 
 .final-message p {
     font-size: 14px;
+    color: #ff00b8;
 }
 
 .final-message strong {
     font-size: 15px;
+    color: #ff00b8;
 }
 
 body.dark-mode {
-    background: #17131d;
-    color: white;
+    background: #18001f;
+    color: #ffffff;
 }
 
 body.dark-mode .about {
-    background: #17131d;
+    background: linear-gradient(
+        110deg,
+        #31002f,
+        #250025,
+        #17001f
+    );
 }
 
 body.dark-mode .about-item h2 {
-    color: white;
+    color: #ffffff;
 }
 
 body.dark-mode .about-item p {
-    color: #d8d4dc;
+    color: #e6d6e6;
 }
 
 body.dark-mode .feature h3 {
-    color: white;
+    color: #ffffff;
 }
 
 body.dark-mode .feature p {
-    color: #d8d4dc;
+    color: #d7c4d8;
 }
 
 body.dark-mode .tags span {
-    color: white;
+    color: #ff00b8;
 }
 
 body.dark-mode .final-message {
-    color: #d9a5cf;
+    color: #ff00b8;
 }
 
 @media (max-width: 900px) {
@@ -398,7 +425,7 @@ body.dark-mode .final-message {
 @media (max-width: 700px) {
     .header {
         position: relative;
-        background: #742e8b;
+        background: #31002f;
     }
 
     .header-container {
@@ -441,7 +468,7 @@ body.dark-mode .final-message {
 
     .about-left {
         border-right: none;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #74205f;
         padding-right: 0;
         padding-bottom: 40px;
     }

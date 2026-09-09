@@ -10,16 +10,12 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #f4f3f4;
-    color: #2b2b2b;
+    background: #18001f;
+    color: #ffffff;
 }
 
 img {
-   .logo-img {
-    width: 240px;
-    height: auto;
-    margin-top: 50px;
-}
+    max-width: 100%;
 }
 
 button {
@@ -35,7 +31,7 @@ button {
 }
 
 .header-container {
-     width: 94%;
+    width: 94%;
     margin: auto;
     height: 100px;
     display: flex;
@@ -50,7 +46,7 @@ button {
 }
 
 .logo img {
-   width: 240px;
+    width: 240px;
     height: auto;
     margin-top: 50px;
 }
@@ -75,10 +71,11 @@ button {
 }
 
 .navigation a:hover {
-    opacity: 0.75;
+    color: #ff00b8;
 }
 
 .navigation a.active {
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -89,14 +86,38 @@ button {
     bottom: -8px;
     width: 100%;
     height: 2px;
-    background: #ffffff;
+    background: #ff00b8;
+}
+
+.dark-mode-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: -15px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dark-mode-button img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.dark-mode-button:hover img {
+    transform: scale(1.1);
 }
 
 .menu-button {
     display: none;
     border: none;
     background: transparent;
-    color: white;
+    color: #ffffff;
     font-size: 28px;
     cursor: pointer;
 }
@@ -106,11 +127,11 @@ button {
     padding-top: 125px;
     background: linear-gradient(
         110deg,
-        #754892 0%,
-        #9a168c 48%,
-        #cc008a 100%
+        #76006f 0%,
+        #51004f 48%,
+        #25002f 100%
     );
-    color: white;
+    color: #ffffff;
 }
 
 .hero-content {
@@ -121,17 +142,19 @@ button {
     font-size: 46px;
     font-weight: 700;
     margin-top: 45px;
+    color: #ffffff;
 }
 
 .hero p {
     font-size: 22px;
     font-weight: 400;
     margin-top: 5px;
+    color: #e49ad7;
 }
 
 .guide-section {
     width: 100%;
-    background: #f4f3f4;
+    background: #18001f;
     padding: 0 35px 60px;
 }
 
@@ -141,7 +164,12 @@ button {
     min-height: 620px;
     margin: -5px auto 0;
     padding: 80px;
-    background: #ffffff;
+    background: linear-gradient(
+        110deg,
+        #31002f,
+        #250025,
+        #17001f
+    );
     border-radius: 24px;
     display: grid;
     grid-template-columns: 310px minmax(500px, 1fr) 330px;
@@ -167,10 +195,10 @@ button {
     padding: 15px;
     display: flex;
     gap: 10px;
-    background: #ffffff;
-    border: 1px solid #d4d1d4;
+    background: #211b29;
+    border: 1px solid #74205f;
     border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 .project-card-icon {
@@ -181,7 +209,7 @@ button {
 }
 
 .project-card h3 {
-    color: #3e2079;
+    color: #ff00b8;
     font-size: 12px;
     margin-bottom: 5px;
 }
@@ -189,7 +217,7 @@ button {
 .project-card p {
     font-size: 7px;
     line-height: 1.7;
-    color: #343434;
+    color: #e6d6e6;
 }
 
 .steps-column {
@@ -211,7 +239,7 @@ button {
 }
 
 .steps-title h2 {
-    color: #3e2878;
+    color: #ff00b8;
     font-size: 20px;
     font-weight: 700;
 }
@@ -229,8 +257,8 @@ button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #3e1d7c;
-    color: white;
+    background: #ff00b8;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +273,7 @@ button {
 }
 
 .step-text h3 {
-    color: #3e2079;
+    color: #ff00b8;
     font-size: 11px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -254,7 +282,11 @@ button {
 .step-text p {
     font-size: 8px;
     line-height: 1.55;
-    color: #252525;
+    color: #e6d6e6;
+}
+
+.step-text strong {
+    color: #ffffff;
 }
 
 .symptoms {
@@ -270,15 +302,15 @@ button {
 }
 
 .mild {
-    color: #468f52;
+    color: #68c978;
 }
 
 .moderate {
-    color: #d39a00;
+    color: #e6b52f;
 }
 
 .severe {
-    color: #bd3535;
+    color: #ff4c5c;
 }
 
 .priority {
@@ -291,15 +323,15 @@ button {
 }
 
 .priority-green {
-    color: #478d51;
+    color: #68c978;
 }
 
 .priority-yellow {
-    color: #d99d00;
+    color: #e6b52f;
 }
 
 .priority-red {
-    color: #bd3737;
+    color: #ff4c5c;
 }
 
 .right-column {
@@ -325,7 +357,7 @@ button {
 }
 
 .video-title h2 {
-    color: #3e2878;
+    color: #ff00b8;
     font-size: 20px;
     margin-bottom: 5px;
 }
@@ -334,10 +366,11 @@ button {
     max-width: 220px;
     font-size: 10px;
     line-height: 1.5;
+    color: #e6d6e6;
 }
 
 .arrow {
-    color: #3e2079;
+    color: #ff00b8;
     text-align: center;
     font-size: 55px;
     line-height: 1;
@@ -353,16 +386,16 @@ button {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    background: #ffffff;
-    border: 1px solid #b9b7bb;
-    border-radius: 5px;
+    background: #211b29;
+    border: 1px solid #a90091;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .video-card:hover {
     transform: scale(1.04);
-    box-shadow: 0 8px 20px rgba(66, 27, 110, 0.15);
+    box-shadow: 0 8px 20px rgba(255, 0, 184, 0.18);
 }
 
 .video-card img {
@@ -372,12 +405,12 @@ button {
 }
 
 .video-card h3 {
-    color: #3e2079;
+    color: #ff00b8;
     font-size: 10px;
 }
 
 .video-card span {
-    color: #5d5570;
+    color: #d7c4d8;
     font-size: 6px;
 }
 
@@ -395,7 +428,7 @@ button {
 }
 
 .questions-section h2 {
-    color: #3e2878;
+    color: #ff00b8;
     font-size: 20px;
     margin-bottom: 4px;
 }
@@ -404,6 +437,7 @@ button {
     max-width: 230px;
     font-size: 10px;
     line-height: 1.5;
+    color: #e6d6e6;
 }
 
 .video-modal {
@@ -413,7 +447,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(10, 0, 15, 0.88);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -433,14 +467,19 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #211b29;
+    border: 1px solid #a90091;
     border-radius: 20px;
     text-align: center;
 }
 
 .video-modal-content h2 {
-    color: #3e2079;
+    color: #ff00b8;
     margin-bottom: 10px;
+}
+
+.video-modal-content p {
+    color: #e6d6e6;
 }
 
 .close-video {
@@ -449,13 +488,12 @@ button {
     right: 20px;
     border: none;
     background: transparent;
-    color: #3e2079;
+    color: #ff00b8;
     font-size: 35px;
     cursor: pointer;
 }
 
 @media (max-width: 1250px) {
-
     .guide-container {
         grid-template-columns: 250px 1fr;
     }
@@ -469,7 +507,6 @@ button {
 }
 
 @media (max-width: 950px) {
-
     .navigation {
         gap: 15px;
     }
@@ -492,13 +529,12 @@ button {
 }
 
 @media (max-width: 750px) {
-
     .header {
         position: relative;
         background: linear-gradient(
             110deg,
-            #754892,
-            #cc008a
+            #76006f,
+            #25002f
         );
     }
 
@@ -510,6 +546,7 @@ button {
 
     .logo img {
         width: 105px;
+        margin-top: 0;
     }
 
     .menu-button {
@@ -530,6 +567,10 @@ button {
 
     .navigation a {
         font-size: 14px;
+    }
+
+    .dark-mode-button {
+        margin-left: 0;
     }
 
     .hero {
@@ -587,7 +628,6 @@ button {
 }
 
 @media (max-width: 500px) {
-
     .logo img {
         width: 95px;
     }
