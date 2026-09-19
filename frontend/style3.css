@@ -22,21 +22,26 @@ img {
 .header {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header-container {
     width: 94%;
     margin: auto;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo img {
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
     width: 240px;
     height: auto;
     margin-top: 50px;
@@ -45,7 +50,7 @@ img {
 .navigation {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 35px;
 }
 
 .navigation a {
@@ -587,7 +592,7 @@ tbody tr:hover td:last-child {
     }
 
     .prototype-box {
-        justify-content: center;
+        justify-content: 100px;
     }
 
     .hero-content {
@@ -608,8 +613,9 @@ tbody tr:hover td:last-child {
 
     .header-container {
         height: auto;
-        min-height: 90px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
     }
 
     .menu-button {
@@ -690,7 +696,9 @@ tbody tr:hover td:last-child {
 @media (max-width: 500px) {
 
     .logo img {
-        width: 100px;
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
     }
 
     .hero h1 {
