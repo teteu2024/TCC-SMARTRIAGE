@@ -1,0 +1,1276 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #222;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 20;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1500px;
+
+    height: 85px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+.menu a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.menu a span {
+    display: block;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+.menu a.ativo {
+    font-weight: 800;
+
+    text-decoration: underline;
+
+    text-underline-offset: 7px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+
+    min-height: 455px;
+
+    padding-top: 80px;
+
+    background:
+        linear-gradient(
+            105deg,
+            #72218e 0%,
+            #a20cad 42%,
+            #c52fc3 100%
+        );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* brilho inferior */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -22px;
+
+    width: 100%;
+    height: 45px;
+
+    background: #ffffff;
+
+    filter: blur(14px);
+
+    opacity: 0.9;
+}
+
+
+/* CONTAINER */
+
+.hero-container {
+    width: 89%;
+    max-width: 1400px;
+
+    min-height: 375px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.15fr
+        0.85fr;
+
+    align-items: center;
+
+    column-gap: 30px;
+}
+
+
+/* =========================================================
+   TEXTO HERO
+========================================================= */
+
+.hero-text {
+    padding-left: 35px;
+
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-family: "Courier New", monospace;
+
+    font-size: 39px;
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 span {
+    display: block;
+
+    color: #230047;
+
+    margin-top: 8px;
+}
+
+.hero-text h3 {
+    max-width: 440px;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+}
+
+.hero-text p {
+    max-width: 430px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-bottom: 20px;
+}
+
+
+/* BOTÃO */
+
+.play-button {
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 16px;
+
+    background: #320065;
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.play-button:hover {
+    transform: translateY(-2px);
+
+    background: #26004f;
+}
+
+.play-button .controller {
+    font-size: 20px;
+}
+
+.play-button strong {
+    font-size: 13px;
+}
+
+.play-button > span:last-child {
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PERSONAGEM
+========================================================= */
+
+.character-area {
+    height: 370px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.character-image {
+    width: 460px;
+    height: 350px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   VÍDEO
+========================================================= */
+
+.video-area {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-right: 20px;
+}
+
+.video-area h2 {
+    color: #35006b;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-bottom: 3px;
+}
+
+.arrow {
+    color: #35006b;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    margin-bottom: 5px;
+}
+
+.video-box {
+    width: 280px;
+    height: 185px;
+
+    background: #3b0864;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.15);
+}
+
+.play-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4b0b84;
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.video-box strong {
+    color: #a675bb;
+
+    font-size: 11px;
+}
+
+.video-box small {
+    color: #9c72ae;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   SEÇÃO PRINCIPAL
+========================================================= */
+
+.game-section {
+    background: #ffffff;
+
+    padding: 38px 0 25px;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.55fr
+        0.9fr;
+
+    column-gap: 45px;
+
+    row-gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SOBRE O JOGO
+========================================================= */
+
+.about-game h2 {
+    color: #36007b;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+.about-game p {
+    color: #333;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+.about-game strong {
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CENÁRIOS
+========================================================= */
+
+.scenarios {
+    margin-top: 30px;
+
+    padding-left: 35px;
+}
+
+.scenarios h2 {
+    color: #3d087d;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.scenario {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+}
+
+.scenario span {
+    width: 32px;
+
+    text-align: center;
+
+    font-size: 23px;
+}
+
+.scenario p {
+    font-size: 15px;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   TÍTULOS CENTRAIS
+========================================================= */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.section-title > span {
+    height: 1px;
+
+    flex: 1;
+
+    background: #bdbdbd;
+}
+
+.section-title h2 {
+    color: #3b087b;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   COMO FUNCIONA
+========================================================= */
+
+.how-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+.how-item {
+    text-align: center;
+}
+
+.how-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #c637c2;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.how-item h3 {
+    color: #42007e;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 8px;
+
+    margin-bottom: 4px;
+}
+
+.how-item p {
+    color: #555;
+
+    font-size: 7px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   BARRAS DE STATUS
+========================================================= */
+
+.status-title {
+    margin-top: 30px;
+}
+
+.status-area {
+    display: grid;
+
+    grid-template-columns:
+        190px
+        1fr
+        145px;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+/* cartão */
+
+.status-card {
+    width: 190px;
+
+    padding: 14px 12px;
+
+    background: #30104e;
+
+    border-radius: 5px;
+}
+
+.status-row {
+    display: grid;
+
+    grid-template-columns:
+        62px
+        1fr
+        30px;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 10px;
+}
+
+.status-row:last-child {
+    margin-bottom: 0;
+}
+
+.status-row strong {
+    color: white;
+
+    font-size: 7px;
+}
+
+.status-row small {
+    color: white;
+
+    font-size: 6px;
+
+    text-align: right;
+}
+
+.bar {
+    width: 100%;
+
+    height: 7px;
+
+    background: #4b2a61;
+
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+}
+
+.bar-energy {
+    width: 68%;
+
+    background: #08a9df;
+}
+
+.bar-emotion {
+    width: 45%;
+
+    background: #d441bd;
+}
+
+.bar-health {
+    width: 72%;
+
+    background: #27c96b;
+}
+
+
+/* texto */
+
+.status-description h3 {
+    font-size: 9px;
+
+    margin-bottom: 6px;
+
+    color: #222;
+}
+
+.status-description p {
+    color: #555;
+
+    font-size: 7px;
+
+    line-height: 1.4;
+
+    margin-bottom: 7px;
+}
+
+
+/* imagem */
+
+.rest-image {
+    width: 145px;
+    height: 100px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.rest-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   FINAIS
+========================================================= */
+
+.finals h2 {
+    color: #3b087b;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-bottom: 13px;
+}
+
+.final {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+.final-icon {
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+.final h3 {
+    font-family: "Courier New", monospace;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.final p {
+    font-size: 7px;
+
+    line-height: 1.35;
+
+    color: #555;
+}
+
+.final.good h3 {
+    color: #3eae4e;
+}
+
+.final.medium h3 {
+    color: #e7b900;
+}
+
+.final.bad h3 {
+    color: #db2929;
+}
+
+
+/* =========================================================
+   PARA QUEM É
+========================================================= */
+
+.audience {
+    grid-column: 1 / 4;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        2fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    margin-top: 5px;
+}
+
+.audience h2 {
+    color: #3d087d;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.audience-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    max-width: 650px;
+}
+
+.audience-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    flex-shrink: 0;
+}
+
+.audience-content p {
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    width: 100%;
+
+    min-height: 80px;
+
+    padding: 10px 45px;
+
+    background: #83168c;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr;
+
+    align-items: center;
+}
+
+
+/* esquerda */
+
+.footer-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.heart {
+    color: #ff1db8;
+
+    font-size: 50px;
+
+    line-height: 1;
+}
+
+.footer-left p {
+    font-size: 15px;
+
+    line-height: 1.2;
+}
+
+
+/* centro */
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-center strong {
+    font-family: "Courier New", monospace;
+
+    font-size: 19px;
+
+    line-height: 0.95;
+}
+
+
+/* direita */
+
+.footer-right {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.gamepad {
+    font-size: 38px;
+}
+
+.footer-right strong {
+    font-size: 12px;
+}
+
+.footer-right p {
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .menu {
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .hero-container {
+        width: 94%;
+
+        grid-template-columns:
+            1fr
+            1fr
+            0.8fr;
+
+        column-gap: 15px;
+    }
+
+    .hero-text {
+        padding-left: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .character-image {
+        width: 370px;
+    }
+
+    .video-box {
+        width: 220px;
+        height: 155px;
+    }
+
+    .game-container {
+        width: 94%;
+
+        column-gap: 25px;
+    }
+
+    .status-area {
+        grid-template-columns:
+            170px
+            1fr;
+    }
+
+    .rest-image {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   TABLET MENOR
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .header-container {
+        width: 95%;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+
+        padding-top: 20px;
+    }
+
+    .video-area {
+        grid-column: 1 / 3;
+
+        padding: 0;
+    }
+
+    .video-box {
+        width: 300px;
+        height: 130px;
+    }
+
+    .game-container {
+        grid-template-columns:
+            1fr
+            1.5fr;
+    }
+
+    .right-column {
+        grid-column: 1 / 3;
+    }
+
+    .audience {
+        grid-column: 1 / 3;
+    }
+
+    .finals {
+        display: flex;
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .finals h2 {
+        width: 100%;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        position: relative;
+
+        background: #83168c;
+    }
+
+    .header-container {
+        height: auto;
+
+        padding: 15px 0;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+
+    /* hero */
+
+    .hero {
+        padding-top: 35px;
+
+        min-height: auto;
+
+        padding-bottom: 50px;
+    }
+
+    .hero-container {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 25px;
+    }
+
+    .hero-text {
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text h3 {
+        font-size: 13px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+    .play-button {
+        margin: 0 auto;
+    }
+
+    .character-area {
+        height: 260px;
+    }
+
+    .character-image {
+        width: 300px;
+        height: 260px;
+    }
+
+    .video-area {
+        grid-column: auto;
+    }
+
+    .video-area h2 {
+        font-size: 16px;
+    }
+
+
+    /* conteúdo */
+
+    .game-section {
+        padding: 30px 0;
+    }
+
+    .game-container {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .left-column,
+    .middle-column,
+    .right-column {
+        grid-column: auto;
+    }
+
+    .about-game h2 {
+        font-size: 25px;
+    }
+
+    .scenarios {
+        padding-left: 0;
+    }
+
+    .how-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px 10px;
+    }
+
+    .status-area {
+        grid-template-columns: 1fr;
+    }
+
+    .status-card {
+        width: 100%;
+    }
+
+    .audience {
+        grid-column: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .audience h2 {
+        text-align: left;
+    }
+
+    .audience-content {
+        align-items: flex-start;
+    }
+
+
+    /* footer */
+
+    .footer {
+        padding: 20px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-left p {
+        font-size: 11px;
+    }
+
+    .footer-center strong {
+        font-size: 15px;
+    }
+
+}
