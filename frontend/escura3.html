@@ -12,10 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
 
     <header class="header">
 
@@ -28,18 +35,12 @@
                 >
             </a>
 
-            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="navigation" id="navigation">
+            <nav class="navigation">
 
                 <a
                     href="./index3.html"
                     class="dark-mode-button"
-                    aria-label="Abrir página do modo escuro"
+                    aria-label="Modo escuro"
                 >
                     <img
                         src="./fotos_pagina1/ant-design_moon-filled.png"
@@ -60,14 +61,17 @@
                 </a>
 
                 <a href="./escura2.html">
-                    Guia de utilização do projeto
+                    Guia de utilização
                 </a>
 
-                <a href="./escura3.html" class="active">
+                <a
+                    href="./escura3.html"
+                    class="active"
+                >
                     Sobre o nosso protótipo
                 </a>
 
-                <a href="index.html#jogo">
+                <a href="./escura.html#jogo">
                     Jogo
                 </a>
 
@@ -77,9 +81,14 @@
 
     </header>
 
+
     <main>
 
-        <section class="hero" id="inicio">
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
 
             <div class="hero-content">
 
@@ -105,29 +114,37 @@
 
         </section>
 
-        <section class="prototype-section" id="prototipo">
+
+        <!-- =====================================================
+             ÁREA PRINCIPAL
+        ====================================================== -->
+
+        <section class="prototype-section">
 
             <div class="prototype-container">
 
+
+                <!-- =================================================
+                     COLUNA ESQUERDA
+                ================================================== -->
+
                 <section class="left-column">
 
-                    <article class="prototype-box">
 
-                        <img
-                            src="./fotos_pagina3/Group (3).png"
-                            alt="Protótipo SmartTriage"
-                            class="prototype-image"
-                        >
+                    <!-- PROTÓTIPO -->
 
-                    </article>
+        
 
-                    <article class="components-section">
+
+                    <!-- COMPONENTES -->
+
+                    <div class="components-section">
 
                         <div class="section-title">
 
                             <img
                                 src="./fotos_pagina3/Vector (7).png"
-                                alt="Ícone de componentes"
+                                alt=""
                             >
 
                             <h2>
@@ -136,7 +153,8 @@
 
                         </div>
 
-                        <div class="table-container">
+
+                        <div class="table-wrapper">
 
                             <table>
 
@@ -145,7 +163,7 @@
                                     <tr>
                                         <th>COMPONENTES</th>
                                         <th>FUNÇÃO</th>
-                                        <th>VALOR</th>
+                                        <th>VALOR (R$)</th>
                                     </tr>
 
                                 </thead>
@@ -160,7 +178,7 @@
 
                                     <tr>
                                         <td>Sensor ultrassônico HC-SR04</td>
-                                        <td>Detecta aproximação do usuário</td>
+                                        <td>Detectar aproximação do usuário</td>
                                         <td>R$ 12,00</td>
                                     </tr>
 
@@ -178,12 +196,12 @@
 
                                     <tr>
                                         <td>Arduino Mega/Uno</td>
-                                        <td>Controlador do sistema</td>
+                                        <td>Controle do sistema</td>
                                         <td>R$ 95,00</td>
                                     </tr>
 
                                     <tr>
-                                        <td>Módulo Wi-Fi</td>
+                                        <td>Módulo WI-FI</td>
                                         <td>Envio de dados para o banco de dados</td>
                                         <td>R$ 40,00</td>
                                     </tr>
@@ -216,11 +234,12 @@
 
                             </table>
 
+
                             <div class="total-cost">
 
-                                <span>
+                                <strong>
                                     CUSTO TOTAL DO PROTÓTIPO
-                                </span>
+                                </strong>
 
                                 <strong>
                                     R$ 535,00
@@ -230,66 +249,59 @@
 
                         </div>
 
-                    </article>
+                    </div>
 
-                    <article class="final-result">
+
+                    <!-- RESULTADO FINAL -->
+
+                    <div class="final-result">
 
                         <div class="result-title">
 
                             <img
                                 src="./fotos_pagina3/Group 32.png"
-                                alt="Resultado final"
+                                alt=""
                             >
 
-                            <div class="result-title-text">
-                                <span>
-                                    RESULTADO
-                                </span>
-
-                                <strong>
-                                    FINAL
-                                </strong>
+                            <div>
+                                <span>RESULTADO</span>
+                                <strong>FINAL</strong>
                             </div>
 
                         </div>
+
 
                         <div class="result-price">
 
-                            <div class="price-icon">
+                            <img
+                                src="./fotos_pagina3/Group 31.png"
+                                alt=""
+                            >
 
-                                <img
-                                    src="./fotos_pagina3/Group 31.png"
-                                    alt="Valor"
-                                >
+                            <div>
 
-                            </div>
-
-                            <div class="price-information">
-
-                                <div class="price-main">
-
-                                    <strong>
-                                        VALOR TOTAL
-                                        <span>DO PROTÓTIPO</span>
-                                    </strong>
-
-                                </div>
-
-                                <div class="price-total">
-
-                                    <span>
-                                        TOTAL APROXIMADO:
-                                    </span>
-
-                                    <strong>
-                                        R$ 535,00
-                                    </strong>
-
-                                </div>
+                                <strong>
+                                    VALOR TOTAL
+                                    <span>DO PROTÓTIPO</span>
+                                </strong>
 
                             </div>
 
                         </div>
+
+
+                        <div class="result-total">
+
+                            <span>
+                                TOTAL APROXIMADO:
+                            </span>
+
+                            <strong>
+                                R$ 535,00
+                            </strong>
+
+                        </div>
+
 
                         <div class="result-description">
 
@@ -302,19 +314,25 @@
 
                         </div>
 
-                    </article>
+                    </div>
 
                 </section>
 
+
+
+                <!-- =================================================
+                     COLUNA CENTRAL
+                ================================================== -->
+
                 <section class="center-column">
 
-                    <article class="objective-card">
+                    <div class="objective-card">
 
                         <div class="objective-title">
 
                             <img
                                 src="./fotos_pagina3/Vector (8).png"
-                                alt="Ícone objetivo"
+                                alt=""
                             >
 
                             <h2>
@@ -324,41 +342,45 @@
 
                         </div>
 
+
                         <div class="objectives-grid">
 
-                            <article class="objective-item">
+
+                            <div class="objective-item">
 
                                 <img
                                     src="./fotos_pagina3/Group 36.png"
-                                    alt="Reduzir filas"
+                                    alt=""
                                 >
 
                                 <p>
                                     Reduzir filas<br>
-                                    na triagem
+                                    hospitalares
                                 </p>
 
-                            </article>
+                            </div>
 
-                            <article class="objective-item">
+
+                            <div class="objective-item">
 
                                 <img
                                     src="./fotos_pagina3/Group 37.png"
-                                    alt="Aumentar velocidade"
+                                    alt=""
                                 >
 
                                 <p>
                                     Aumentar a rapidez<br>
-                                    no atendimento
+                                    na triagem
                                 </p>
 
-                            </article>
+                            </div>
 
-                            <article class="objective-item objective-center">
+
+                            <div class="objective-item objective-center">
 
                                 <img
                                     src="./fotos_pagina3/Group 38.png"
-                                    alt="Tecnologia"
+                                    alt=""
                                 >
 
                                 <p>
@@ -367,13 +389,14 @@
                                     e eficiente
                                 </p>
 
-                            </article>
+                            </div>
 
-                            <article class="objective-item">
+
+                            <div class="objective-item">
 
                                 <img
                                     src="./fotos_pagina3/Group 39.png"
-                                    alt="Organização"
+                                    alt=""
                                 >
 
                                 <p>
@@ -381,13 +404,14 @@
                                     do atendimento
                                 </p>
 
-                            </article>
+                            </div>
 
-                            <article class="objective-item">
+
+                            <div class="objective-item">
 
                                 <img
                                     src="./fotos_pagina3/Group 41.png"
-                                    alt="Saúde"
+                                    alt=""
                                 >
 
                                 <p>
@@ -395,107 +419,125 @@
                                     da saúde
                                 </p>
 
-                            </article>
+                            </div>
 
                         </div>
 
-                    </article>
+                    </div>
 
                 </section>
 
+
+
+                <!-- =================================================
+                     COLUNA DIREITA
+                ================================================== -->
+
                 <aside class="right-column">
 
-                    <article class="video-prototype">
+
+                    <!-- FOTO -->
+
+                    <div class="video-prototype">
 
                         <img
                             src="./fotos_pagina3/image 40.png"
                             alt="Funcionamento do protótipo"
                         >
 
-                    </article>
+                    </div>
 
-                    <section class="benefits-list">
 
-                        <article class="benefit">
+                    <!-- BENEFÍCIOS -->
+
+                    <div class="benefits-list">
+
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
                                 Cadastro inicial do paciente
                             </p>
 
-                        </article>
+                        </div>
 
-                        <article class="benefit">
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
                                 Coleta automática de informações
                             </p>
 
-                        </article>
+                        </div>
 
-                        <article class="benefit">
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
                                 Identificação do nível de sintomas
                             </p>
 
-                        </article>
+                        </div>
 
-                        <article class="benefit">
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
                                 Organização do atendimento
                             </p>
 
-                        </article>
+                        </div>
 
-                        <article class="benefit">
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
                                 Envio inteligente de dados
                             </p>
 
-                        </article>
+                        </div>
 
-                        <article class="benefit">
+
+                        <div class="benefit">
 
                             <img
                                 src="./fotos_pagina3/Group 25 (1).png"
-                                alt="Check"
+                                alt=""
                             >
 
                             <p>
-                                Maior rapidez no processo de
+                                Maior rapidez no processo de<br>
                                 triagem hospitalar
                             </p>
 
-                        </article>
+                        </div>
 
-                    </section>
+                    </div>
 
                 </aside>
 
@@ -503,17 +545,7 @@
 
         </section>
 
-        <section id="sobre"></section>
-
-        <section id="referencias"></section>
-
-        <section id="guia"></section>
-
-        <section id="jogo"></section>
-
     </main>
-
-    <script src="script.js"></script>
 
 </body>
 
