@@ -1,3 +1,7 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +16,7 @@ body {
     font-family: "Poppins", sans-serif;
     background: #f4f3f4;
     color: #2b2b2b;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -22,15 +27,17 @@ button {
     font-family: inherit;
 }
 
-/* =========================
-   CABECALHO
-========================= */
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
 
 .header {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 }
 
 .header-container {
@@ -42,34 +49,70 @@ button {
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 .logo-img {
     width: 240px;
     height: auto;
     margin-top: 50px;
 }
 
-.menu {
+.logo img {
+    width: 240px;
+    height: auto;
+    margin-top: 50px;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.navigation {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 35px;
 }
 
-.menu a {
-    color: white;
+.navigation a {
+    position: relative;
+    color: #ffffff;
     text-decoration: none;
+    text-align: center;
     font-size: 16px;
-    transition: 0.3s;
+    line-height: 1.3;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: 0.3s ease;
 }
 
-.menu a:hover {
+.navigation a:hover {
     opacity: 0.7;
 }
 
-.menu a.ativo {
+.navigation a.active {
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 6px;
 }
+
+.navigation a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   BOTÃO DARK MODE
+========================================================= */
 
 .dark-mode-button {
     width: 40px;
@@ -88,27 +131,44 @@ button {
     width: 28px;
     height: 28px;
     object-fit: contain;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .dark-mode-button:hover img {
     transform: scale(1.1);
 }
 
-/* =========================
+
+/* =========================================================
+   BOTÃO MENU MOBILE
+========================================================= */
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
     min-height: 300px;
     padding-top: 125px;
+
     background: linear-gradient(
         110deg,
         #754892 0%,
         #9a168c 48%,
         #cc008a 100%
     );
-    color: white;
+
+    color: #ffffff;
 }
 
 .hero-content {
@@ -127,28 +187,42 @@ button {
     margin-top: 5px;
 }
 
-/* =========================
+
+/* =========================================================
    GUIDE
-========================= */
+========================================================= */
 
 .guide-section {
     width: 100%;
     background: #f4f3f4;
     padding: 0 35px 60px;
+    transition: background 0.3s ease;
 }
 
 .guide-container {
     width: 100%;
     max-width: 1500px;
     min-height: 620px;
+
     margin: -5px auto 0;
     padding: 80px;
+
     background: #ffffff;
     border-radius: 24px;
+
     display: grid;
     grid-template-columns: 310px minmax(500px, 1fr) 330px;
     gap: 50px;
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* =========================================================
+   COLUNA DO PROTÓTIPO
+========================================================= */
 
 .prototype-column {
     display: flex;
@@ -164,15 +238,28 @@ button {
     object-fit: contain;
 }
 
+
+/* =========================================================
+   CARD DO PROJETO
+========================================================= */
+
 .project-card {
     width: 250px;
     padding: 15px;
+
     display: flex;
     gap: 10px;
+
     background: #ffffff;
     border: 1px solid #d4d1d4;
     border-radius: 15px;
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
+    transition:
+        background 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .project-card-icon {
@@ -194,9 +281,10 @@ button {
     color: #343434;
 }
 
-/* =========================
-   PASSOS
-========================= */
+
+/* =========================================================
+   COLUNA DOS PASSOS
+========================================================= */
 
 .steps-column {
     display: flex;
@@ -222,11 +310,19 @@ button {
     font-weight: 700;
 }
 
+
+/* =========================================================
+   PASSOS
+========================================================= */
+
 .step {
     min-height: 64px;
+
     display: grid;
     grid-template-columns: 45px 38px 1fr;
+
     align-items: center;
+
     column-gap: 16px;
     margin-bottom: 3px;
 }
@@ -234,12 +330,16 @@ button {
 .step-number {
     width: 40px;
     height: 40px;
+
     border-radius: 50%;
+
     background: #3e1d7c;
-    color: white;
+    color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 19px;
     font-weight: 600;
 }
@@ -262,6 +362,15 @@ button {
     line-height: 1.55;
     color: #252525;
 }
+
+.step-text strong {
+    color: inherit;
+}
+
+
+/* =========================================================
+   SINTOMAS
+========================================================= */
 
 .symptoms {
     display: flex;
@@ -287,6 +396,11 @@ button {
     color: #bd3535;
 }
 
+
+/* =========================================================
+   PRIORIDADE
+========================================================= */
+
 .priority {
     margin-top: 4px;
 }
@@ -308,15 +422,21 @@ button {
     color: #bd3737;
 }
 
-/* =========================
+
+/* =========================================================
    COLUNA DIREITA
-========================= */
+========================================================= */
 
 .right-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/* =========================================================
+   VÍDEO
+========================================================= */
 
 .video-section {
     padding-top: 10px;
@@ -344,6 +464,7 @@ button {
     max-width: 220px;
     font-size: 10px;
     line-height: 1.5;
+    color: #333333;
 }
 
 .arrow {
@@ -357,17 +478,26 @@ button {
 .video-card {
     width: 215px;
     height: 120px;
+
     margin: auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     gap: 6px;
+
     background: #ffffff;
     border: 1px solid #b9b7bb;
     border-radius: 5px;
+
     cursor: pointer;
-    transition: 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
 
 .video-card:hover {
@@ -390,6 +520,11 @@ button {
     color: #5d5570;
     font-size: 6px;
 }
+
+
+/* =========================================================
+   PERGUNTAS
+========================================================= */
 
 .questions-section {
     display: flex;
@@ -414,21 +549,28 @@ button {
     max-width: 230px;
     font-size: 10px;
     line-height: 1.5;
+    color: #333333;
 }
 
-/* =========================
-   MODAL
-========================= */
+
+/* =========================================================
+   MODAL DO VÍDEO
+========================================================= */
 
 .video-modal {
     display: none;
+
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.7);
+
     z-index: 1000;
+
     align-items: center;
     justify-content: center;
 }
@@ -441,15 +583,22 @@ button {
     width: 90%;
     max-width: 700px;
     min-height: 350px;
+
     padding: 40px;
+
     position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+
+    background: #ffffff;
     border-radius: 20px;
+
     text-align: center;
+
+    transition: background 0.3s ease;
 }
 
 .video-modal-content h2 {
@@ -457,20 +606,155 @@ button {
     margin-bottom: 10px;
 }
 
+.video-modal-content p {
+    color: #333333;
+}
+
 .close-video {
     position: absolute;
+
     top: 15px;
     right: 20px;
+
     border: none;
     background: transparent;
+
     color: #3e2079;
+
     font-size: 35px;
     cursor: pointer;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+
+/* =========================================================
+   ==================== DARK MODE ==========================
+========================================================= */
+
+body.dark-mode {
+    background: #17131d;
+    color: #ffffff;
+}
+
+
+/* Fundo da seção */
+
+body.dark-mode .guide-section {
+    background: #17131d;
+}
+
+
+/* Container principal */
+
+body.dark-mode .guide-container {
+    background: linear-gradient(
+        110deg,
+        #251b2d,
+        #211827,
+        #19141f
+    );
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Card do projeto */
+
+body.dark-mode .project-card {
+    background: #211b29;
+    border-color: #74205f;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .project-card h3 {
+    color: #ff00b8;
+}
+
+body.dark-mode .project-card p {
+    color: #e6d6e6;
+}
+
+
+/* Títulos */
+
+body.dark-mode .steps-title h2,
+body.dark-mode .video-title h2,
+body.dark-mode .questions-section h2 {
+    color: #ff00b8;
+}
+
+
+/* Textos */
+
+body.dark-mode .step-text p,
+body.dark-mode .video-title p,
+body.dark-mode .questions-section p {
+    color: #d8d4dc;
+}
+
+body.dark-mode .step-text strong {
+    color: #ffffff;
+}
+
+
+/* Ícones e números */
+
+body.dark-mode .step-number {
+    background: #ff00b8;
+    color: #ffffff;
+}
+
+body.dark-mode .arrow {
+    color: #ff00b8;
+}
+
+
+/* Vídeo */
+
+body.dark-mode .video-card {
+    background: #211b29;
+    border-color: #a90091;
+}
+
+body.dark-mode .video-card h3 {
+    color: #ff00b8;
+}
+
+body.dark-mode .video-card span {
+    color: #d7c4d8;
+}
+
+body.dark-mode .video-card:hover {
+    box-shadow: 0 8px 20px rgba(255, 0, 184, 0.18);
+}
+
+
+/* Modal */
+
+body.dark-mode .video-modal {
+    background: rgba(5, 0, 10, 0.88);
+}
+
+body.dark-mode .video-modal-content {
+    background: #211b29;
+    border: 1px solid #a90091;
+}
+
+body.dark-mode .video-modal-content h2 {
+    color: #ff00b8;
+}
+
+body.dark-mode .video-modal-content p {
+    color: #d8d4dc;
+}
+
+body.dark-mode .close-video {
+    color: #ff00b8;
+}
+
+
+/* =========================================================
+   RESPONSIVO - 1250px
+========================================================= */
 
 @media (max-width: 1250px) {
 
@@ -480,20 +764,31 @@ button {
 
     .right-column {
         grid-column: 1 / -1;
+
         flex-direction: row;
         align-items: center;
+
         gap: 40px;
     }
 }
 
+
+/* =========================================================
+   RESPONSIVO - 950px
+========================================================= */
+
 @media (max-width: 950px) {
 
-    .menu {
+    .navigation {
         gap: 15px;
     }
 
-    .menu a {
+    .navigation a {
         font-size: 12px;
+    }
+
+    .dark-mode-button {
+        margin-left: 0;
     }
 
     .hero h1 {
@@ -509,10 +804,16 @@ button {
     }
 }
 
+
+/* =========================================================
+   RESPONSIVO - 750px
+========================================================= */
+
 @media (max-width: 750px) {
 
     .header {
         position: relative;
+
         background: linear-gradient(
             110deg,
             #754892,
@@ -523,27 +824,51 @@ button {
     .header-container {
         min-height: 75px;
         height: auto;
+
         flex-wrap: wrap;
+
+        margin: 0;
+        width: 100%;
+
+        padding: 10px 20px;
     }
 
     .logo-img {
         width: 105px;
+        margin-top: 0;
     }
 
-    .menu {
+    .logo img {
+        width: 105px;
+        margin-top: 0;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
         display: none;
+
         width: 100%;
+
         flex-direction: column;
+
         gap: 18px;
+
         padding: 20px 0;
     }
 
-    .menu.open {
+    .navigation.open {
         display: flex;
     }
 
-    .menu a {
+    .navigation a {
         font-size: 14px;
+    }
+
+    .dark-mode-button {
+        margin-left: 0;
     }
 
     .hero {
@@ -567,8 +892,11 @@ button {
 
     .guide-container {
         grid-template-columns: 1fr;
+
         padding: 40px 20px;
+
         gap: 50px;
+
         border-radius: 18px;
     }
 
@@ -582,7 +910,9 @@ button {
 
     .right-column {
         grid-column: auto;
+
         order: 3;
+
         flex-direction: column;
         align-items: stretch;
     }
@@ -600,9 +930,22 @@ button {
     }
 }
 
+
+/* =========================================================
+   RESPONSIVO - 500px
+========================================================= */
+
 @media (max-width: 500px) {
 
+    .header-container {
+        padding: 10px 15px;
+    }
+
     .logo-img {
+        width: 95px;
+    }
+
+    .logo img {
         width: 95px;
     }
 
@@ -615,8 +958,17 @@ button {
         padding: 0 20px;
     }
 
+    .guide-container {
+        padding: 35px 15px;
+    }
+
     .steps-title h2 {
         font-size: 16px;
+    }
+
+    .step {
+        grid-template-columns: 38px 30px 1fr;
+        column-gap: 10px;
     }
 
     .step-number {
@@ -625,11 +977,30 @@ button {
         font-size: 16px;
     }
 
+    .step-icon {
+        width: 24px;
+        height: 24px;
+    }
+
     .step-text h3 {
         font-size: 10px;
     }
 
     .step-text p {
         font-size: 7px;
+    }
+
+    .video-title h2,
+    .questions-section h2 {
+        font-size: 17px;
+    }
+
+    .video-title p,
+    .questions-section p {
+        font-size: 9px;
+    }
+
+    .video-card {
+        width: 200px;
     }
 }
