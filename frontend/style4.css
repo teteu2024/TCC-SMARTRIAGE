@@ -1,269 +1,254 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #ffffff;
-    color: #ffffff;
+font-family: "Poppins", sans-serif;
+background: #ffffff;
+color: #ffffff;
 }
 
-
 /* =========================
-   CABECALHO
+CABECALHO
 ========================= */
 
 .header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 10;
 }
 
 .header-container {
-    width: 99%;
-    margin: -10px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+width: 99%;
+margin: -10px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo-img {
-    width: 240px;
-    height: auto;
-    margin-top: 50px;
-}
-
 
 /* =========================
-   MENU
+LOGO
+========================= */
+
+.logo-img {
+width: 240px;
+height: auto;
+margin-top: 50px;
+}
+
+/* =========================
+MENU
 ========================= */
 
 .menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+display: flex;
+align-items: center;
+gap: 35px;
 }
 
 .menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 1.35;
-    transition: 0.2s ease;
+color: white;
+text-decoration: none;
+font-size: 16px;
+transition: 0.3s;
 }
 
 .menu a:hover {
-    opacity: 0.8;
+opacity: 0.7;
 }
 
 .menu a.ativo {
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+font-weight: 700;
+text-decoration: underline;
+text-underline-offset: 6px;
 }
 
+/* =========================
+BOTAO MODO ESCURO
+========================= */
+
 .dark-mode-button {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    margin-left: -15px;
-    border: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+width: 40px;
+height: 40px;
+padding: 0;
+margin-left: -15px;
+border: none;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
 }
 
 .dark-mode-button img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    transition: 0.3s;
+width: 28px;
+height: 28px;
+object-fit: contain;
+transition: 0.3s;
 }
 
 .dark-mode-button:hover img {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
-
 /* =========================
-   PARTE SUPERIOR
+PARTE SUPERIOR
 ========================= */
 
 .sobre {
-    min-height: 100vh;
-    background: #ffffff;
+min-height: 100vh;
+background: #ffffff;
 }
 
 .intro {
-    min-height: 510px;
-    padding: 155px 30px 95px;
-    text-align: center;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #a91cb1 0%,
-            #a91cb1 69%,
-            #c41fc0 78%,
-            #e27ad9 88%,
-            #ffffff 100%
-        );
+min-height: 510px;
+padding: 155px 30px 95px;
+text-align: center;
+background:
+linear-gradient(
+to bottom,
+#a91cb1 0%,
+#a91cb1 69%,
+#c41fc0 78%,
+#e27ad9 88%,
+#ffffff 100%
+);
 }
 
 .intro h1 {
-    font-size: 54px;
-    line-height: 1.1;
-    font-weight: 800;
-    margin-bottom: 22px;
+font-size: 54px;
+line-height: 1.1;
+font-weight: 800;
+margin-bottom: 22px;
 }
 
 .intro h2 {
-    font-size: 20px;
-    color: #e9a7e6;
-    font-weight: 700;
-    margin-bottom: 15px;
+font-size: 20px;
+color: #e9a7e6;
+font-weight: 700;
+margin-bottom: 15px;
 }
 
 .intro p {
-    font-size: 19px;
-    line-height: 1.6;
-    font-weight: 400;
+font-size: 19px;
+line-height: 1.6;
+font-weight: 400;
 }
 
-
 /* =========================
-   NOSSO TIME
+NOSSO TIME
 ========================= */
 
 .equipe {
-    margin-top: -25px;
-    padding: 0 55px 70px;
-    position: relative;
+margin-top: -25px;
+padding: 0 55px 70px;
+position: relative;
 }
 
 .equipe h3 {
-    color: #341075;
-    text-align: center;
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 82px;
+color: #341075;
+text-align: center;
+font-size: 36px;
+font-weight: 800;
+margin-bottom: 82px;
 }
 
-
 /* =========================
-   CARDS
+CARDS
 ========================= */
 
 .cards {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 45px;
-    align-items: start;
+max-width: 1400px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 45px;
+align-items: start;
 }
 
 .card {
-    text-align: center;
-    color: #333333;
+text-align: center;
+color: #333333;
 }
 
 .card > img {
-    width: 100%;
-    height: 178px;
-    object-fit: cover;
-    border-radius: 11px;
-    display: block;
-    margin-bottom: 0;
+width: 100%;
+height: 178px;
+object-fit: cover;
+border-radius: 11px;
+display: block;
+margin-bottom: 0;
 }
 
 .card h4 {
-    color: #3b0b88;
-    font-size: 21px;
-    line-height: 1.2;
-    font-weight: 800;
-    margin-top: 0;
+color: #3b0b88;
+font-size: 21px;
+line-height: 1.2;
+font-weight: 800;
+margin-top: 0;
 }
 
 .card > span {
-    display: block;
-    color: #e000c4;
-    font-size: 11px;
-    font-weight: 700;
-    margin-top: 2px;
-    margin-bottom: 8px;
+display: block;
+color: #e000c4;
+font-size: 11px;
+font-weight: 700;
+margin-top: 2px;
+margin-bottom: 8px;
 }
 
 .card p {
-    max-width: 230px;
-    margin: 0 auto;
-    color: #4e4e4e;
-    font-size: 8.5px;
-    line-height: 1.4;
+max-width: 230px;
+margin: 0 auto;
+color: #4e4e4e;
+font-size: 8.5px;
+line-height: 1.4;
 }
 
-
 /* =========================
-   REDES SOCIAIS
+REDES SOCIAIS
 ========================= */
 
 .social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: 100%;
-    max-width: 230px;
-
-    margin: 9px auto 0;
-
-    gap: 5px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+max-width: 230px;
+margin: 9px auto 0;
+gap: 5px;
 }
 
 .social-item {
-    display: flex;
-    align-items: center;
-
-    gap: 5px;
+display: flex;
+align-items: center;
+gap: 5px;
 }
 
 .social-item img {
-    width: 13px;
-    height: 13px;
-
-    object-fit: contain;
-
-    display: block;
+width: 13px;
+height: 13px;
+object-fit: contain;
+display: block;
 }
 
 .social small {
-    color: #333333;
-    font-size: 7px;
-    line-height: 1.2;
-    text-align: left;
+color: #333333;
+font-size: 7px;
+line-height: 1.2;
+text-align: left;
 }
 
-
 /* =========================
-   SECOES VAZIAS
+SECOES VAZIAS
 ========================= */
 
 #inicio,
@@ -271,137 +256,136 @@ body {
 #guia,
 #prototipo,
 #jogo {
-    display: none;
+display: none;
 }
 
-
 /* =========================
-   TABLET
+TABLET
 ========================= */
 
 @media (max-width: 1200px) {
 
-    .menu {
-        gap: 20px;
-    }
+.menu {
+    gap: 20px;
+}
 
-    .menu a {
-        font-size: 14px;
-    }
+.menu a {
+    font-size: 14px;
+}
 
-    .cards {
-        gap: 25px;
-    }
+.cards {
+    gap: 25px;
+}
 
-    .card > img {
-        height: 150px;
-    }
+.card > img {
+    height: 150px;
 }
 
 
+
 /* =========================
-   TABLET PEQUENO
+TABLET PEQUENO
 ========================= */
 
 @media (max-width: 900px) {
 
-    .header-container {
-        height: auto;
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .menu {
-        padding-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px 22px;
-    }
-
-    .intro {
-        padding-top: 190px;
-    }
-
-    .intro h1 {
-        font-size: 43px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 45px 30px;
-    }
+.header-container {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
 }
 
+.menu {
+    padding-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 22px;
+}
+
+.intro {
+    padding-top: 190px;
+}
+
+.intro h1 {
+    font-size: 43px;
+}
+
+.intro p {
+    font-size: 16px;
+}
+
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+}
+
+}
 
 /* =========================
-   CELULAR
+CELULAR
 ========================= */
 
 @media (max-width: 550px) {
+.logo-img {
+    width: 105px;
+}
 
-    .logo-img {
-        width: 105px;
-    }
+.menu a {
+    font-size: 12px;
+}
 
-    .menu a {
-        font-size: 12px;
-    }
+.intro {
+    padding: 175px 20px 75px;
+    min-height: 480px;
+}
 
-    .intro {
-        padding: 175px 20px 75px;
-        min-height: 480px;
-    }
+.intro h1 {
+    font-size: 36px;
+}
 
-    .intro h1 {
-        font-size: 36px;
-    }
+.intro h2 {
+    font-size: 16px;
+}
 
-    .intro h2 {
-        font-size: 16px;
-    }
+.intro p {
+    font-size: 14px;
+}
 
-    .intro p {
-        font-size: 14px;
-    }
+.intro p br {
+    display: none;
+}
 
-    .intro p br {
-        display: none;
-    }
+.equipe {
+    padding: 0 25px 50px;
+}
 
-    .equipe {
-        padding: 0 25px 50px;
-    }
+.equipe h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 
-    .equipe h3 {
-        font-size: 30px;
-        margin-bottom: 50px;
-    }
+.cards {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 50px;
+}
 
-    .cards {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        gap: 50px;
-    }
+.card > img {
+    height: 190px;
+}
 
-    .card > img {
-        height: 190px;
-    }
+.card p {
+    font-size: 10px;
+}
 
-    .card p {
-        font-size: 10px;
-    }
+.social small {
+    font-size: 8px;
+}
 
-    .social small {
-        font-size: 8px;
-    }
-
-    .social-item img {
-        width: 15px;
-        height: 15px;
-    }
+.social-item img {
+    width: 15px;
+    height: 15px;
+}
+}
 }

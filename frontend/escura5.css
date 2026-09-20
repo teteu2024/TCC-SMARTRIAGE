@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Poppins", sans-serif;
+background: #100018;
+color: #ffffff;
+}
+
+img {
+max-width: 100%;
+}
+
+a {
+text-decoration: none;
+}
+
+/* =========================
+CABECALHO
+========================= */
+
+.header {
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 10;
+}
+
+.header-container {
+width: 99%;
+margin: -10px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+/* =========================
+LOGO
+========================= */
+
+.logo img,
+.logo-img {
+width: 240px;
+height: auto;
+margin-top: 50px;
+}
+
+/* =========================
+MENU
+========================= */
+
+.menu {
+display: flex;
+align-items: center;
+gap: 35px;
+}
+
+.menu a {
+color: #ffffff;
+text-decoration: none;
+font-size: 16px;
+transition: 0.3s;
+}
+
+.menu a:hover {
+opacity: 0.7;
+}
+
+.menu a.ativo {
+font-weight: 700;
+text-decoration: underline;
+text-underline-offset: 6px;
+}
+
+/* =========================
+BOTAO MODO ESCURO
+========================= */
+
+.dark-mode-button {
+width: 40px;
+height: 40px;
+padding: 0;
+margin-left: -15px;
+border: none;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.dark-mode-button img {
+width: 28px;
+height: 28px;
+object-fit: contain;
+transition: 0.3s;
+}
+
+.dark-mode-button:hover img {
+transform: scale(1.1);
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+min-height: 258px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 85px 28px 25px;
+
+background: linear-gradient(
+    105deg,
+    #49145f 0%,
+    #68005f 50%,
+    #36002f 100%
+);
+
+}
+
+.hero-text {
+max-width: 580px;
+}
+
+.hero h1 {
+color: #ffffff;
+font-size: 34px;
+line-height: 1.1;
+font-weight: 700;
+margin-bottom: 5px;
+}
+
+.hero p {
+color: #ffffff;
+font-size: 20px;
+line-height: 1.3;
+text-decoration: none;
+}
+
+/* =========================
+DOCUMENTO
+========================= */
+
+.documento {
+width: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.folha {
+width: 120px;
+height: 154px;
+border: 1.5px solid #d64ee8;
+border-radius: 7px;
+position: relative;
+padding-top: 60px;
+}
+
+.folha::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+width: 38px;
+height: 38px;
+border-left: 1.5px solid #d64ee8;
+border-bottom: 1.5px solid #d64ee8;
+border-radius: 0 0 0 8px;
+}
+
+.folha span {
+display: block;
+width: 15px;
+height: 1px;
+background: #d64ee8;
+margin: 0 0 22px 26px;
+}
+
+/* =========================
+CONTEUDO
+========================= */
+
+.conteudo {
+padding: 10px 15px 10px;
+background: #100018;
+}
+
+/* =========================
+TITULOS COM IMAGEM
+========================= */
+
+.titulo-secao {
+display: flex;
+align-items: center;
+gap: 8px;
+color: #ffffff;
+font-size: 17px;
+font-weight: 700;
+margin-bottom: 12px;
+}
+
+.titulo-secao img {
+width: 27px;
+height: 27px;
+object-fit: contain;
+display: block;
+}
+
+.inteligencia {
+margin-top: 27px;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.cards {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 22px;
+}
+
+.card {
+min-height: 63px;
+border: 1px solid #54205e;
+border-radius: 7px;
+padding: 7px 8px;
+background: #3b1747;
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
+}
+
+.card h3 {
+color: #ffffff;
+font-size: 13px;
+line-height: 1.1;
+font-weight: 700;
+margin-bottom: 2px;
+}
+
+.card p {
+color: #eeeeee;
+font-size: 8px;
+line-height: 1.25;
+margin-bottom: 3px;
+}
+
+.card a {
+display: block;
+color: #d36ee6;
+font-size: 7px;
+font-weight: 700;
+line-height: 1.15;
+word-break: break-all;
+}
+
+.card a:hover {
+color: #f29cff;
+}
+
+/* =========================
+PARTE INFERIOR
+========================= */
+
+.parte-inferior {
+display: grid;
+grid-template-columns: 34% 30% 36%;
+margin-top: 30px;
+}
+
+.coluna {
+padding-right: 18px;
+}
+
+.tecnologia {
+padding-left: 18px;
+border-left: 2px solid #4a4a4a;
+border-right: 2px solid #4a4a4a;
+}
+
+.observacao {
+padding-left: 27px;
+padding-top: 34px;
+}
+
+/* =========================
+PROTOCOLOS
+========================= */
+
+.cards-vertical {
+width: 230px;
+margin-left: 47px;
+}
+
+.card.grande {
+min-height: 88px;
+margin-bottom: 9px;
+}
+
+.card.grande h3 {
+font-size: 14px;
+}
+
+.card.grande p {
+font-size: 8px;
+margin-bottom: 5px;
+}
+
+/* =========================
+TECNOLOGIAS
+========================= */
+
+.tecnologias {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.tecnologia-card {
+height: 62px;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 10px 80px;
+border: 1px solid #54205e;
+border-radius: 7px;
+box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
+background: #3b1747;
+}
+
+.tecnologia-card img {
+width: 25px;
+height: 25px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+.tecnologia-card h3 {
+color: #ffffff;
+font-size: 11px;
+}
+
+.tecnologia-card p {
+color: #dddddd;
+font-size: 7px;
+white-space: nowrap;
+}
+
+/* =========================
+OBSERVACAO
+========================= */
+
+.observacao-titulo {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 4px;
+}
+
+.observacao-titulo img {
+width: 27px;
+height: 27px;
+object-fit: contain;
+}
+
+.observacao h2 {
+color: #ffffff;
+font-size: 17px;
+}
+
+.observacao p {
+max-width: 320px;
+color: #eeeeee;
+font-size: 9px;
+line-height: 1.35;
+margin-left: 39px;
+}
+
+.observacao strong {
+display: block;
+color: #d84ce7;
+font-size: 9px;
+margin-left: 39px;
+}
+
+/* =========================
+RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+.menu {
+    gap: 15px;
+}
+
+.menu a {
+    font-size: 12px;
+}
+
+.dark-mode-button {
+    margin-left: 0;
+}
+
+.logo img,
+.logo-img {
+    width: 180px;
+}
+
+.hero {
+    padding-left: 20px;
+}
+
+.hero h1 {
+    font-size: 30px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.parte-inferior {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.tecnologia {
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #4a4a4a;
+    border-bottom: 2px solid #4a4a4a;
+    padding: 20px 0;
+}
+
+.observacao {
+    padding-left: 0;
+}
+
+}
+
+@media (max-width: 700px) {
+
+.header {
+    position: relative;
+    background: #36002f;
+}
+
+.header-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    margin: 0;
+}
+
+.logo img,
+.logo-img {
+    width: 180px;
+    margin-top: 0;
+}
+
+.menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu a {
+    font-size: 12px;
+}
+
+.dark-mode-button {
+    margin-left: 0;
+}
+
+.hero {
+    min-height: 330px;
+    padding: 50px 20px 30px;
+    align-items: flex-start;
+}
+
+.documento {
+    display: none;
+}
+
+.hero h1 {
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+.cards-vertical {
+    margin-left: 0;
+    width: 100%;
+}
+
+.tecnologia-card {
+    padding: 10px 20px;
+}
+}
